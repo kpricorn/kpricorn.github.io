@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sebastian de Castelberg - @kpricorn on kpricorn.com</title>
-    <link>kpricorn.com/</link>
-    <description>Recent content in Sebastian de Castelberg - @kpricorn on kpricorn.com</description>
+    <title>Sebastian de Castelberg - @kpricorn on kpricorn.org</title>
+    <link>https://kpricorn.org/</link>
+    <description>Recent content in Sebastian de Castelberg - @kpricorn on kpricorn.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
     
-	<atom:link href="kpricorn.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kpricorn.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Online Identification - Swisscom</title>
-      <link>kpricorn.com/resume/swisscom-oid/</link>
+      <link>https://kpricorn.org/resume/swisscom-oid/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>kpricorn.com/resume/swisscom-oid/</guid>
+      <guid>https://kpricorn.org/resume/swisscom-oid/</guid>
       <description>&lt;p&gt;Simple digital onboarding&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>letshelp.ch - Swisscom</title>
-      <link>kpricorn.com/resume/swisscom-crowdfunding/</link>
+      <link>https://kpricorn.org/resume/swisscom-crowdfunding/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>kpricorn.com/resume/swisscom-crowdfunding/</guid>
+      <guid>https://kpricorn.org/resume/swisscom-crowdfunding/</guid>
       <description>&lt;p&gt;Swisscom crowdfunding marketplace letshelp.ch&lt;/p&gt;</description>
     </item>
     

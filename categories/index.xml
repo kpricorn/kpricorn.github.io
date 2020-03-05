@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on kpricorn.com</title>
-    <link>kpricorn.com/categories/</link>
-    <description>Recent content in Categories on kpricorn.com</description>
+    <title>Categories on kpricorn.org</title>
+    <link>https://kpricorn.org/categories/</link>
+    <description>Recent content in Categories on kpricorn.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="kpricorn.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kpricorn.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
