@@ -29,5 +29,16 @@
       <description>&lt;p&gt;Swisscom crowdfunding marketplace letshelp.ch and Crowdfunding Platform as a service&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>rayneer</title>
+      <link>https://kpricorn.github.io/resume/rayneer-tv/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>https://kpricorn.github.io/resume/rayneer-tv/</guid>
+      <description>&lt;p&gt;Platform for personalized music tv. All the pieces from playlist management,
+video transcoding and distribution, HLS Streaming service, iOS and Android App
+integration.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
