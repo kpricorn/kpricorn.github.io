@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resume on kpricorn.org</title>
-    <link>https://kpricorn.github.io/resume/</link>
+    <link>https://kpricorn.org/resume/</link>
     <description>Recent content in Resume on kpricorn.org</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
     
-	<atom:link href="https://kpricorn.github.io/resume/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kpricorn.org/resume/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Swisscom Online Identification</title>
-      <link>https://kpricorn.github.io/resume/swisscom-oid/</link>
+      <link>https://kpricorn.org/resume/swisscom-oid/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>https://kpricorn.github.io/resume/swisscom-oid/</guid>
+      <guid>https://kpricorn.org/resume/swisscom-oid/</guid>
       <description>&lt;p&gt;Simple digital onboarding&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Swisscom Crowdfunding</title>
-      <link>https://kpricorn.github.io/resume/swisscom-crowdfunding/</link>
+      <link>https://kpricorn.org/resume/swisscom-crowdfunding/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>https://kpricorn.github.io/resume/swisscom-crowdfunding/</guid>
+      <guid>https://kpricorn.org/resume/swisscom-crowdfunding/</guid>
       <description>&lt;p&gt;Swisscom crowdfunding marketplace letshelp.ch and Crowdfunding Platform as a service&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Rayneer</title>
-      <link>https://kpricorn.github.io/resume/rayneer-tv/</link>
+      <link>https://kpricorn.org/resume/rayneer-tv/</link>
       <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      <guid>https://kpricorn.github.io/resume/rayneer-tv/</guid>
+      <guid>https://kpricorn.org/resume/rayneer-tv/</guid>
       <description>&lt;p&gt;Platform for personalized music tv. All the pieces from playlist management,
 video transcoding and distribution, HLS Streaming service, iOS and Android App
 integration.&lt;/p&gt;</description>
