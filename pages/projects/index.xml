@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Selected projects on kpricorn</title>
+    <link>https://kpricorn.org/pages/projects/</link>
+    <description>Recent content in Selected projects on kpricorn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kpricorn.org/pages/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tour d’Uetli</title>
+      <link>https://kpricorn.org/pages/projects/tour-uetli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kpricorn.org/pages/projects/tour-uetli/</guid>
+      <description>Tour d’Uetli and friends #  The COVID-19 compatible trail running stage race Tour d&amp;rsquo;Uetli on Zürich&amp;rsquo;s local mountain Üetliberg.
+My contribution #   Implemented the Strava synchronization, the ranking generation, and a GraphQL API for athlete, effort, and ranking data. Scaled the application design to allow for white-label and fee-based tours. Established the website and CMS structure, integrated the API data on the static website and shaped the information architecture.</description>
+    </item>
+    
+    <item>
+      <title>Swisscom Online Identification</title>
+      <link>https://kpricorn.org/pages/projects/swisscom-oid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kpricorn.org/pages/projects/swisscom-oid/</guid>
+      <description>&lt;h1 id=&#34;swisscom--online-identification&#34;&gt;
+  Swisscom  Online Identification
+  &lt;a class=&#34;anchor&#34; href=&#34;#swisscom--online-identification&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id=&#34;simple-digital-onboarding&#34;&gt;
+  Simple digital onboarding
+  &lt;a class=&#34;anchor&#34; href=&#34;#simple-digital-onboarding&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>Swisscom Crowdfunding</title>
+      <link>https://kpricorn.org/pages/projects/swisscom-crowdfunding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kpricorn.org/pages/projects/swisscom-crowdfunding/</guid>
+      <description>&lt;img alt=&#34;Fuchs&#34; src=&#34;fuchs.jpg&#34;&gt;
+&lt;h1 id=&#34;swisscom-crowdfunding&#34;&gt;
+  Swisscom Crowdfunding
+  &lt;a class=&#34;anchor&#34; href=&#34;#swisscom-crowdfunding&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Swisscom crowdfunding marketplace letshelp.ch and Crowdfunding Platform as a service&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rayneer TV</title>
+      <link>https://kpricorn.org/pages/projects/rayneer-tv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kpricorn.org/pages/projects/rayneer-tv/</guid>
+      <description>&lt;img alt=&#34;Screenshot&#34; src=&#34;screenshot.jpg&#34;&gt;
+&lt;h1 id=&#34;rayneer-tv&#34;&gt;
+  Rayneer TV
+  &lt;a class=&#34;anchor&#34; href=&#34;#rayneer-tv&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Platform for personalized music tv. All the pieces from playlist management,
+video transcoding and distribution, HLS Streaming service, iOS and Android App
+integration.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
