@@ -4,7 +4,8 @@
    node tools/refresh.mjs new.json [more.json ...]
 
    Each file holds Strava activities, either as list_activities returns them
-   ({activities:[...]} or [...] of objects with id, sport_type, start_local,
+   ({activities:[...]}, that wrapped in a saved tool result [{type:'text',text}],
+   or [...] of objects with id, sport_type, start_local,
    summary.distance, summary.elevation_gain) or as rows
    [start_local, sport_type, distance_m, elevation_gain_m, ..., id] (id last).
    Activities already on the page (same id) are replaced, so overlapping
@@ -37,6 +38,8 @@ let added = 0, updated = 0;
 const unknown = {};
 for (const file of process.argv.slice(2)) {
   let data = JSON.parse(readFileSync(file, 'utf8'));
+  /* a tool result saved to a file: [{type:'text', text:'{"activities":[...]}'}] */
+  if (Array.isArray(data) && data[0]?.type === 'text') data = JSON.parse(data.map(x => x.text).join(''));
   if (data.activities) data = data.activities;
   for (const a of data) {
     const { start, sport, dist, up, id } = toRow(a);

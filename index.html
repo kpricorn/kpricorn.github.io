@@ -53,7 +53,7 @@ h1 em{display:block;font-style:italic;color:var(--mute);font-size:.62em;letter-s
 .key i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--k);margin:0 .35em 0 .1em}
 .key span{white-space:nowrap;margin-right:.8em}
 
-#range{position:relative;margin:0 var(--pad);outline:none;cursor:crosshair}
+#range{position:relative;margin:0 var(--pad);outline:none}
 #range svg{display:block;width:100%;overflow:visible}
 #range:focus-visible{outline:1px dashed var(--faint);outline-offset:6px}
 .ridge path{fill:none;stroke-width:1;stroke-linejoin:round}
@@ -63,7 +63,6 @@ h1 em{display:block;font-style:italic;color:var(--mute);font-size:.62em;letter-s
 .tick{stroke:var(--faint);stroke-width:1}
 .hl-row{fill:none;stroke:var(--ink);stroke-width:1.75;stroke-linejoin:round}
 .hl{fill:var(--c);fill-opacity:.22;stroke:var(--c);stroke-width:2;stroke-linejoin:round}
-.dot{fill:var(--c)}
 
 .readout{
   position:sticky;bottom:0;z-index:2;margin:0;padding:.85rem var(--pad) calc(.85rem + env(safe-area-inset-bottom));
@@ -174,7 +173,7 @@ const DATA = [["2013-05-03T19:15","r",9569,197,"335759145"],["2013-05-05T13:13",
   }
 
   const box = $('range');
-  let geo, svg, hlRow, hl, dot, sel = null;
+  let geo, svg, hlRow, hl, sel = null;
 
   const path = (pts) => pts.map(([x, y], j) => `${j ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join('');
   const rowPts = (mi, hs) => {
@@ -216,8 +215,7 @@ const DATA = [["2013-05-03T19:15","r",9569,197,"335759145"],["2013-05-05T13:13",
     });
     hlRow = el('path', { class: 'hl-row' });
     hl = el('path', { class: 'hl' });
-    dot = el('circle', { class: 'dot', r: 3.5 });
-    svg.append(hlRow, hl, dot);
+    svg.append(hlRow, hl);
     box.replaceChildren(svg);
     box.setAttribute('aria-label', `Every Strava outing since ${fdate(DATA[0][0], { month: 'long', year: 'numeric' })}, one row per month, newest on top; each outing is a peak as tall as its climb. Use the arrow keys to step through them and Enter to open one on Strava.`);
     show(sel ?? DATA.length - 1);
@@ -231,7 +229,6 @@ const DATA = [["2013-05-03T19:15","r",9569,197,"335759145"],["2013-05-05T13:13",
     const y0 = geo.base(mi), p = pos(a), sg = sigma(a), pts = [];
     for (let t = p - 3.2 * sg; t <= p + 3.2 * sg; t += sg / 8) { const d = (t - p) / sg; pts.push([geo.x(t, mo.days), y0 - a[3] * Math.exp(-d * d / 2) * geo.s]); }
     hl.setAttribute('d', path(pts) + 'Z');
-    dot.setAttribute('cx', geo.x(p, mo.days)); dot.setAttribute('cy', y0 - a[3] * geo.s);
     $('readout').innerHTML =
       `<span class="kind">${KIND[a[1]]}</span><b>${fdate(a[0], { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })}</b>` +
       `<span><b>${(a[2] / 1000).toFixed(1)}</b> km</span><span>↑ <b>${fmt(a[3])}</b> m</span>` +
@@ -254,15 +251,19 @@ const DATA = [["2013-05-03T19:15","r",9569,197,"335759145"],["2013-05-05T13:13",
       }
       if (best !== null && mi > i0 + 1 && bd < 12) break;
     }
-    return bd < 40 ? best : null;
+    if (best === null || bd >= 40) return null;
+    /* a direct hit: the pointer is on the peak itself, not just near it */
+    const a = DATA[best], mo = months.find(m => m.key === a[0].slice(0, 7));
+    at.hit = Math.abs(geo.x(pos(a), mo.days) - x) <= Math.max(8, geo.x(pos(a) + 1.5 * sigma(a), mo.days) - geo.x(pos(a), mo.days));
+    return best;
   }
   box.addEventListener('pointermove', e => {
     const i = at(e);
-    box.style.cursor = i !== null && e.pointerType === 'mouse' ? 'pointer' : '';
+    box.style.cursor = i !== null && at.hit && e.pointerType === 'mouse' ? 'pointer' : '';
     if (i !== null && i !== sel) show(i);
   });
   /* with a mouse, a click opens the outing on Strava; a tap only picks it */
-  box.addEventListener('click', e => { if (e.pointerType === 'mouse') { const i = at(e); if (i !== null) open(url(DATA[i]), '_blank', 'noopener'); } });
+  box.addEventListener('click', e => { if (e.pointerType === 'mouse') { const i = at(e); if (i !== null && at.hit) open(url(DATA[i]), '_blank', 'noopener'); } });
   box.addEventListener('keydown', e => {
     if (e.key === 'Enter') { open(url(DATA[sel]), '_blank', 'noopener'); return; }
     const step = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: 1, ArrowDown: -1, PageUp: 10, PageDown: -10 }[e.key];
